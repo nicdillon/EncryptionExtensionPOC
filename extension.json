@@ -1,0 +1,68 @@
+{
+  "displayName": "ezEncrypt",
+  "name": "ezencrypt",
+  "platform": "web",
+  "version": "1.0.0",
+  "description": "Easily encrypt individual data elements and store them in new data elements that can be accessed and used by other rules and actions. ",
+  "author": {
+    "name": "Nic Dillon"
+  },
+  "viewBasePath": "src/view/",
+  "actions": [
+    {
+      "displayName": "Encrypt (AES-CTR)",
+      "name": "encrypt-aes-ctr",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/encryptAesCtr.js",
+      "viewPath": "actions/encryptAesCtr.html"
+    }
+  ],
+  "configuration": {
+    "viewPath": "configuration/configuration.html",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "properties": {}
+    }
+  },
+  "dataElements": [
+    {
+      "displayName": "EncryptedData",
+      "name": "encrypteddata",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/encrypteddata.js",
+      "viewPath": "dataElements/encrypteddata.html"
+    },
+    {
+      "displayName": "EncryptionKey",
+      "name": "encryptionkey",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/encryptionkey.js",
+      "viewPath": "dataElements/encryptionkey.html"
+    },
+    {
+      "displayName": "Counter",
+      "name": "counter",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/dataElements/counter.js",
+      "viewPath": "dataElements/counter.html"
+    }
+  ],
+  "iconPath": "./resources/icons/ezEncryptIcon.svg"
+}
